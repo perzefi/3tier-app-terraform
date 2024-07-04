@@ -1,3 +1,4 @@
+#Defining security group for web tier 
 resource "aws_security_group" "web" {
   name = "sg_web_autoscaling"
   ingress {
@@ -15,7 +16,7 @@ resource "aws_security_group" "web" {
   vpc_id = aws_vpc.demo-vpc.id
 }
 
-
+#Defining security group for app tier 
 resource "aws_security_group" "app" {
   name = "sg_app_autoscaling"
   ingress {
@@ -33,7 +34,7 @@ resource "aws_security_group" "app" {
   vpc_id = aws_vpc.demo-vpc.id
 }
 
-
+#Defining security group for database tier 
 resource "aws_security_group" "database" {
   name = "rds-mysql-sg"
   ingress {
